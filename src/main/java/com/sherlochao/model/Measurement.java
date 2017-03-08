@@ -38,4 +38,7 @@ public class Measurement implements Serializable {
 
     @Column(name = "answer")
     private String answer;
+
+    @Column(name = "article_id")
+    private String articleId;
 }

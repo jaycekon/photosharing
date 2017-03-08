@@ -43,4 +43,9 @@ public class MeasurementServiceImpl implements MeasurementService {
         }
         return list;
     }
+
+    @Override
+    public List<Measurement> findMeasurement(int articleId) {
+        return measurementDao.findMeasurement(articleId);
+    }
 }

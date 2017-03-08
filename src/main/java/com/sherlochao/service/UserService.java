@@ -12,7 +12,7 @@ public interface UserService {
 	 * 增加新用户
 	 * @param user
 	 */
-	public String saveUser(User user);
+	public void saveUser(User user);
 	
 	/**
 	 * 更新用户

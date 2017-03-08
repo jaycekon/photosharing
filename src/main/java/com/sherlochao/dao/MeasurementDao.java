@@ -15,4 +15,6 @@ public interface MeasurementDao {
     Measurement findByMeasurementId(int measurementId);
 
     List<Measurement> listMeasurement();
+
+    List<Measurement> findMeasurement(int articleId);
 }

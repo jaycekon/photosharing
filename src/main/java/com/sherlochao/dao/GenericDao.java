@@ -7,7 +7,7 @@ public interface GenericDao<T> {
 	
 	T get(String id);
 	
-	String save(T entity);
+	void save(T entity);
 	
 	void delete(String id);
 	

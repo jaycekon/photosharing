@@ -16,5 +16,6 @@ public interface MeasurementService {
 
     List<Measurement> listMeasurement();
 
+    List<Measurement> findMeasurement(int articleId);
 
 }

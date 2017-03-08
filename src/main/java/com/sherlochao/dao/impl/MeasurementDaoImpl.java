@@ -38,4 +38,12 @@ public class MeasurementDaoImpl extends GenericDaoImpl<Measurement>
         Query query = super.getSession().createQuery(hql);
         return query.list();
     }
+
+    @Override
+    public List<Measurement> findMeasurement(int articleId){
+        String hql = "from Measurement where articleId = ?";
+        Query query = super.getSession().createQuery(hql);
+        query.setInteger(0,articleId);
+        return query.list();
+    }
 }

@@ -29,7 +29,7 @@ public class MeasurementApi {
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("status","success");
         jsonObject.put("msg","添加试题成功");
-        return jsonObject.toString();
+        return jsonObject;
     }
 
     @RequestMapping("/listMeasurement")
@@ -41,7 +41,17 @@ public class MeasurementApi {
         return jsonObject;
     }
 
-    
+    @RequestMapping("/findMeasurement")
+    @ResponseBody
+    public Object findMeasurement(Integer articleId){
+        JSONObject jsonObject = new JSONObject();
+        List<Measurement> list = measurementService.findMeasurement(articleId);
+        jsonObject.put("topics",list);
+        return jsonObject;
+    }
+
+
+
 
 
 

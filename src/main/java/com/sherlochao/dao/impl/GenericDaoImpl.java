@@ -30,9 +30,9 @@ public class GenericDaoImpl<T> implements GenericDao<T>{
 	}
 
 	@Override
-	public String save(T entity) {
+	public void save(T entity) {
 		// TODO Auto-generated method stub
-		return (String)this.getSession().save(entity);
+		this.getSession().save(entity);
 	}
 
 	@Override
